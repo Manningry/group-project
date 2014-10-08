@@ -29,23 +29,23 @@ public class MainProgram
 		
 		Scanner userInput = new Scanner(System.in);
 		int amountOfGroups = userInput.nextInt();
+		boolean Group = true;
 		
+		while(Group)
+		{
+			for(int i = 0; i < gradebook.size(); i++)
+				if(gradebook.get(i).getGroup()==0)
+					for(int j = 0; j < amountOfGroups; j++)
+						gradebook.get(i).setGroup(j);
 		
-		
-		
-			
-		
-			for(int j = 0; j < gradebook.size(); j++)
-				{
-				for(int i = 1; i < amountOfGroups+1; i++)
-					{
+		}
+				
+				
+						
 					
-						if(gradebook.get(j).getGroup()==0)
-							gradebook.get(j).setGroup(i);
-					}
-			}
 
-		for(Student x: gradebook)
+					
+	for(Student x: gradebook)
 			{
 			System.out.println(x.getFirstName() + " " + x.getLastName() + " " + x.getScore() + "  " + x.getGroup());
 			}
@@ -53,6 +53,7 @@ public class MainProgram
 			
 			}
 		}
+
 
 
 
